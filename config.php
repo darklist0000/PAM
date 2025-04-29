@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "12345678";
-$dbname = "your_dbname";
+$password = "14492436";
+$dbname = "PAM_DB";
 
 // สร้างการเชื่อมต่อ
 $conn = new mysqli($servername, $username, $password, $dbname);
