@@ -1,14 +1,15 @@
-<?php /*
-if (!isset($_SESSION['username'])) {
+<?php
+session_start(); // เริ่มต้น session
+if (!isset($_SESSION['user_id'])) {
   header("Location: login.php"); // ถ้ายังไม่ได้ล็อกอิน ให้ไปที่หน้า login
-  exit(); 
+  exit();
 }
 if (isset($_get['logout'])) {
     session_destroy(); // ลบ session
     unset($_SESSION['username']); // ลบตัวแปร session
     header("Location: login.php"); // ส่งไปที่หน้า login
   exit();
-} */
+}
 
 include 'config.php';
 
@@ -42,7 +43,7 @@ $result = $conn->query($sql);
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="logout.php">
                         ออกจากระบบ
                     </a>
                 </li>
