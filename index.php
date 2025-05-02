@@ -1,8 +1,14 @@
-<?php
-if (!isset($_SESSION['user_id'])) {
+<?php /*
+if (!isset($_SESSION['username'])) {
   header("Location: login.php"); // ถ้ายังไม่ได้ล็อกอิน ให้ไปที่หน้า login
-  exit();
+  exit(); 
 }
+if (isset($_get['logout'])) {
+    session_destroy(); // ลบ session
+    unset($_SESSION['username']); // ลบตัวแปร session
+    header("Location: login.php"); // ส่งไปที่หน้า login
+  exit();
+} */
 
 include 'config.php';
 
@@ -10,6 +16,7 @@ include 'config.php';
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
